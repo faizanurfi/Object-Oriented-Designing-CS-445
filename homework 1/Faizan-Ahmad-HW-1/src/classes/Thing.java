@@ -1,3 +1,5 @@
+package classes;
+
 public class Thing {
 	private String name = "";
 	
@@ -11,11 +13,11 @@ public class Thing {
 	
 	public String toString() {
 		String s = "";
-		if(this.getClass().getSimpleName() == "Thing") {
+		if(this.getClass().getSimpleName().equals("Thing")) {
 			s = this.getName();
 		}
 		else {
-			s = this.getName()+" "+this.getClass();
+			s = this.getName()+" "+this.getClass().getSimpleName();
 		}
 		return s;
 	}
